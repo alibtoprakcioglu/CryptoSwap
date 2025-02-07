@@ -51,17 +51,23 @@ public class SwapSteps extends CommonMethods  {
 	}
 
 	// eger end pointten 200 dönüyor mu test etmek istersek:
-	//public void validateExchangeRateAPI() {
-//    Response response = given()
-//            .baseUri("cryptoswap.com")
-//            .queryParam("source", "USDT")
-//            .queryParam("target", "BTC")
-//            .queryParam("amount", "100")
-//            .when()
-//            .get("/swap-rate")
-//            .then()
-//            .statusCode(200)  
-//            .extract().response(); 
+//	  @Test
+//	    public void validateExchangeRateAPI() {
+//	        Response response = given()
+//	            .baseUri("https://cryptoswap.com")  
+//	            .queryParam("source", "USDT")
+//	            .queryParam("target", "BTC")
+//	            .queryParam("amount", "100")
+//	        .when()
+//	            .get("/swap-rate")
+//	        .then()
+//	            .statusCode(200)  // HTTP 200 doğrulaması
+//	            .body("rate", notNullValue())  // JSON içinde rate alanı olup olmadığını kontrol et
+//	            .extract().response();
+//	        
+//	        // Yanıtı konsola yazdır
+//	        System.out.println("Response Body: " + response.getBody().asString());
+//	    }
 
 	@When("the user confirms the swap")
 	public void the_user_confirms_the_swap() {
